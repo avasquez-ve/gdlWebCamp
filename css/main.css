@@ -99,6 +99,10 @@ textarea {
 :root {
     --primaryColor: #fe4918;
     --secundaryColor: #353535;
+
+    --fontOswald: 'Oswald', sans-serif;
+    --fontPTSans: 'PT Sans', sans-serif;
+    --fontOpenSans: 'Open Sans', sans-serif;
 }
 html{
     box-sizing: border-box;
@@ -108,12 +112,11 @@ html{
 }
 body{
     background-color: #f2f2f2;
-    font-family: 'arial', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--fontOpenSans);
 }
 /**Global**/
 h2{
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--fontOswald);
 }
 .contenedor{
     width: 98%;
@@ -199,7 +202,7 @@ p.slogan span{
 h1.nombre-sitio{
     font-size: 5.9vw;
     text-transform: uppercase;
-    font-family: 'PT Sans', sans-serif;
+    font-family: var(--fontPTSans);
 }
 @media only screen and (min-width: 768px){
     h1.nombre-sitio{
@@ -213,7 +216,67 @@ div.barra{
     background-color: var(--secundaryColor);
     padding: 1.5rem 0;
 }
-
+div.logo{
+    width: 80%;
+}
+div.logo img {
+    width: 100%;
+}
+@media only screen and (min-width: 768px){
+    div.logo {
+        width: 33%;
+        float: left;
+    }
+}
+nav.navegacion-principal{
+    display: none;
+}
+nav.navegacion-principal a {
+    font-family: var(--fontOswald);
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: all .3s ease;
+}
+nav.navegacion-principal a:hover {
+    background-color: var(--primaryColor);
+}
+nav.navegacion-principal a:last-child {
+    border: solid 2px var(--primaryColor);
+    color: var(--primaryColor);
+}
+nav.navegacion-principal a:last-child:hover{
+    color: #ffffff;
+}
+@media only screen and (min-width: 768px){
+    nav.navegacion-principal{
+        display: block;
+        width: 67%;
+        float: right;
+        text-align: right;
+        display: block;
+    }
+    nav.navegacion-principal a {
+        font-size: 2.6rem;
+        margin-right: 1rem;
+        padding: 1rem 1rem;
+        display: inline-block;
+    }
+    nav.navegacion-principal a:last-child {
+        margin-right: 0;
+    }
+}
+@media only screen and (min-width: 992px){
+    nav.navegacion-principal a {
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 1200px){
+    nav.navegacion-principal a {
+        font-size: 2.6  rem;
+    }
+}
 
 
 
