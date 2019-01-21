@@ -98,6 +98,7 @@ textarea {
    ========================================================================== */
 :root {
     --primaryColor: #fe4918;
+    --secundaryColor: #353535;
 }
 html{
     box-sizing: border-box;
@@ -110,8 +111,29 @@ body{
     font-family: 'arial', sans-serif;
     font-family: 'Open Sans', sans-serif;
 }
+/**Global**/
 h2{
     font-family: 'Oswald', sans-serif;
+}
+.contenedor{
+    width: 98%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 480px){
+    .contenedor{
+        width: 95%;
+    }
+}
+@media only screen and (min-width: 768px){
+    .contenedor{
+        width: 90%;
+    }
+}
+@media only screen and (min-width: 992px){
+    .contenedor{
+        width: 90%;
+        max-width: 1600px;
+    }
 }
 /**Header**/
 div.hero{
@@ -185,6 +207,11 @@ h1.nombre-sitio{
         margin: 0;
         line-height: 1;
     }
+}
+/**Barra**/
+div.barra{
+    background-color: var(--secundaryColor);
+    padding: 1.5rem 0;
 }
 
 
