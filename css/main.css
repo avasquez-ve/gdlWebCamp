@@ -181,7 +181,7 @@ h1.nombre-sitio{
 }
 @media only screen and (min-width: 768px){
     h1.nombre-sitio{
-        font-size: 11vw;
+        font-size: 9vw;
         margin: 0;
         line-height: 1;
     }
