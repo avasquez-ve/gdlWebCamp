@@ -218,6 +218,7 @@ div.barra{
 }
 div.logo{
     width: 80%;
+    float: left;
 }
 div.logo img {
     width: 100%;
@@ -225,10 +226,10 @@ div.logo img {
 @media only screen and (min-width: 768px){
     div.logo {
         width: 33%;
-        float: left;
     }
 }
-nav.navegacion-principal{
+/**Navegacion principal**/
+nav.navegacion-principal {
     display: none;
 }
 nav.navegacion-principal a {
@@ -236,8 +237,12 @@ nav.navegacion-principal a {
     color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 2.1rem;
     transition: all .3s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 nav.navegacion-principal a:hover {
     background-color: var(--primaryColor);
@@ -259,9 +264,11 @@ nav.navegacion-principal a:last-child:hover{
     }
     nav.navegacion-principal a {
         font-size: 2.6rem;
-        margin-right: 1rem;
         padding: 1rem 1rem;
         display: inline-block;
+        width: auto;
+        text-align: center;
+        margin: 0 1rem 0 0;
     }
     nav.navegacion-principal a:last-child {
         margin-right: 0;
@@ -278,6 +285,28 @@ nav.navegacion-principal a:last-child:hover{
     }
 }
 
+/** Menú Móvil **/
+div.menu-movil{
+    width: 60px;
+    display:block;
+    float:right;
+    text-align:right;
+    margin-top:1.2rem;
+}
+div.menu-movil:hover{
+    cursor: pointer;
+}
+@media only screen and (min-width:768px){
+    div.menu-movil{
+        display:none;
+    }
+}
+div.menu-movil span{
+    height: .8rem;
+    margin-bottom: 1.2rem;
+    background-color: #ffffff;
+    display: block;
+}
 
 
 
