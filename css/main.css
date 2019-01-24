@@ -116,12 +116,17 @@ body{
     font-family: var(--fontOpenSans);
 }
 /**Global**/
+p{
+    font-size: 1.8rem;
+}
 .seccion {
     padding: 20px 0;
 }
 .seccion p {
-    font-size: 1.8rem;
     text-align: center;
+}
+h1{
+    font-size: 3.5rem;
 }
 h2{
     font-family: var(--fontOswald);
@@ -136,6 +141,12 @@ h2::after{
     height: 30px;
     width: 100px;
     margin: 0 auto;
+}
+h3{
+    font-size: 2.5rem;
+}
+h4,h5,h6{
+    font-size: 2rem;
 }
 .contenedor{
     width: 98%;
@@ -327,6 +338,51 @@ div.menu-movil span{
     background-color: #ffffff;
     display: block;
 }
+/** Talleres **/
+section.programa {
+    position: relative;
+}
+div.contenedor-video{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/*div.contenedor-video video {
+    width: 100%;
+}*/
+div.contenido-programa {
+    position: absolute;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+}
+div.programa-evento{
+    background-color: rgba(255, 255, 255, .8);
+    padding: 15px;
+    margin-top: 80px;
+}
+@media only screen and (min-width:768px){
+    div.programa-evento{
+        width:70%;
+    }
+}
+@media only screen and (min-width:992px){
+    div.programa-evento{
+        width:50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
