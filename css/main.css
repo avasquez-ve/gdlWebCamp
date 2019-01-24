@@ -106,6 +106,7 @@ textarea {
 }
 html{
     box-sizing: border-box;
+    font-size: 62.5%;
 }
 *,*::before,*::after{
     box-sizing: inherit;
@@ -115,8 +116,26 @@ body{
     font-family: var(--fontOpenSans);
 }
 /**Global**/
+.seccion {
+    padding: 20px 0;
+}
+.seccion p {
+    font-size: 1.8rem;
+    text-align: center;
+}
 h2{
     font-family: var(--fontOswald);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+h2::after{
+    content: '';
+    display:block;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    margin: 0 auto;
 }
 .contenedor{
     width: 98%;
@@ -171,7 +190,7 @@ div.informacion-evento{
 }
 @media only screen and (min-width:768px){
     div.informacion-evento{
-        width: 70%;
+        width: 60%;
         margin:0 auto;
         margin-top: 4rem;
     }
@@ -207,7 +226,7 @@ h1.nombre-sitio{
 @media only screen and (min-width: 768px){
     h1.nombre-sitio{
         font-size: 9vw;
-        margin: 0;
+        margin: 3rem 0 0 0;
         line-height: 1;
     }
 }
@@ -225,7 +244,7 @@ div.logo img {
 }
 @media only screen and (min-width: 768px){
     div.logo {
-        width: 33%;
+        width: 25%;
     }
 }
 /**Navegacion principal**/
@@ -257,7 +276,7 @@ nav.navegacion-principal a:last-child:hover{
 @media only screen and (min-width: 768px){
     nav.navegacion-principal{
         display: block;
-        width: 67%;
+        width: 75%;
         float: right;
         text-align: right;
         display: block;
@@ -291,7 +310,7 @@ div.menu-movil{
     display:block;
     float:right;
     text-align:right;
-    margin-top:1.2rem;
+    margin-top:.8rem;
 }
 div.menu-movil:hover{
     cursor: pointer;
@@ -302,8 +321,9 @@ div.menu-movil:hover{
     }
 }
 div.menu-movil span{
-    height: .8rem;
-    margin-bottom: 1.2rem;
+    width: 80%;
+    height: .6rem;
+    margin-bottom: .8rem;
     background-color: #ffffff;
     display: block;
 }
