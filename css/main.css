@@ -549,6 +549,10 @@ p.numero {
     font-family: var(--fontOswald);
 }
 /**Tabla de precios**/
+section.precios {
+    height: 100%;
+    overflow: auto;
+}
 ul.lista-precios > li {
     padding: 10px;
 }
@@ -598,6 +602,11 @@ div.tabla-precio ul li {
     text-transform: uppercase;
     color: #868686;
     line-height: 26px;
+}
+/**Google mapa**/
+div.mapa {
+    height: 420px;
+    background-color:#222222;
 }
 
 
