@@ -163,6 +163,13 @@ h4,h5,h6{
     font-size: 2rem;
     margin-top: 20px;
     transition: all .3s ease;
+    border: 2px solid var(--primaryColor);
+}
+.button.hollow,
+.button.hollow:hover {
+    background-color: #ffffff;
+    color: var(--primaryColor);
+
 }
 .button:hover {
     background-color: #e33000;
@@ -536,12 +543,62 @@ ul.resumen-evento li {
 }
 p.numero {
     color: var(--primaryColor);
-    font-size: 4em;
+    font-size: 5.3em;
     display: block;
     margin: 0 0 10px 0;
+    font-family: var(--fontOswald);
 }
+/**Tabla de precios**/
+ul.lista-precios > li {
+    padding: 10px;
+}
+@media only screen and (min-width: 768px) {
+    ul.lista-precios > li {
+        float: left;
+        width: 33.3%;
+    }
+}
+div.tabla-precio {
+    border: 1px solid #e1e1e1;
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+div.tabla-precio:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--primaryColor);
+    box-shadow: 0px 0px 30px #666666;
+    transition: all .3s ease;
+}
+div.tabla-precio  h3 {
+    font-family: var(--fontOswald);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+div.tabla-precio p.numero {
+    color: #000000;
+    margin-top: 20px 0;
+}
+div.tabla-precio ul li::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f00c';
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    color: green;
+    -webkit-font-smoothing: antialiased;
+    font-size: 2rem;
 
-
+}
+div.tabla-precio ul li {
+    font-family: var(--fontPTSans);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 26px;
+}
 
 
 /* ==========================================================================
