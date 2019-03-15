@@ -326,7 +326,7 @@ nav.navegacion-principal a:last-child {
 nav.navegacion-principal a:last-child:hover{
     color: #ffffff;
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 992px){
     nav.navegacion-principal{
         display: block;
         width: 75%;
@@ -368,7 +368,7 @@ div.menu-movil{
 div.menu-movil:hover{
     cursor: pointer;
 }
-@media only screen and (min-width:768px){
+@media only screen and (min-width:992px){
     div.menu-movil{
         display:none;
     }
@@ -717,7 +717,45 @@ div.cuenta-regresiva ul li{
         float: left;
     }
 }
-
+/**Site Footer**/
+footer.site-footer {
+    background-color: var(--secundaryColor);
+    padding-top: 40px;
+    margin-top: 20px;
+}
+footer div.contenedor > div {
+    color: #ffffff;
+    padding: 0 20px;
+    font-size: 1.3rem; 
+}
+@media only screen and (min-width: 768px) {
+    footer div.contenedor > div {
+        width: 33.3%;
+        float:left;
+    }
+}
+footer h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: var(--fontOswald);
+    margin-bottom: 20px;
+}
+footer span {
+    color: var(--primaryColor);
+}
+div.ultimos-tweets ul li {
+    margin-bottom: 10px;
+}
+footer div div.menu nav.redes-sociales {
+    text-align: left;
+}
+p.copyright {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 10px 0;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
