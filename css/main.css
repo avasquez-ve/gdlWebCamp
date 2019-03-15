@@ -608,6 +608,43 @@ div.mapa {
     height: 420px;
     background-color:#222222;
 }
+/**Testimoniales**/
+div.testimoniales {
+    padding-bottom: 20px;
+}
+div.testimonial {
+    padding: 5px;
+}
+@media only screen and (min-width: 768px) {
+    div.testimonial {
+        float:left;
+        width: 33.3%;
+    }
+}
+blockquote {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    position: relative;
+    margin: 0 0 10px 0;
+    padding-bottom: 20px;
+}
+blockquote p {
+    text-align: justify !important;
+    font-size: 1.4rem !important;
+    font-family: var(--fontPTSans);
+    padding: 0 20px 0 65px;
+}
+blockquote p::before {
+    content: '\201c';
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    line-height: 1;
+    font-size: 14rem;
+    padding: 0;
+    margin: 0;
+    color: var(--primaryColor);
+}
 
 
 /* ==========================================================================
