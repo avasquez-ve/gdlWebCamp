@@ -171,6 +171,13 @@ h4,h5,h6{
     color: var(--primaryColor);
 
 }
+.button.transparente {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
+.button.transparente:hover {
+    border: 2px solid var(--primaryColor);
+}
 .button:hover {
     background-color: #e33000;
 }
@@ -219,6 +226,7 @@ div.contenedor-header {
 }
 nav.redes-sociales{
     text-align: center;
+    padding-bottom: 20px;
 }
 nav.redes-sociales a{
     color: #ffffff;
@@ -264,7 +272,7 @@ p.slogan span{
     font-weight: bold;
 }
 h1.nombre-sitio{
-    font-size: 5.9vw;
+    font-size: 9vw;
     text-transform: uppercase;
     font-family: var(--fontPTSans);
 }
@@ -670,8 +678,45 @@ footer.info-testimonial cite span {
     color: #000000;
     text-transform: none;
     margin-top: 5px;
-}
 
+}
+/**Newsletter**/
+div.newsletter {
+    position: relative;
+    height: auto;
+}
+div.newsletter::before {
+    background-image: url(../img/bg-newsletter.jpg);
+    content: '';
+}
+div.newsletter .contenido {
+    padding: 100px 0;
+    color: #ffffff;
+    text-align:center;
+    position: relative;
+}
+div.newsletter .contenido p {
+   font-size: 3rem; 
+}
+div.newsletter .contenido h3 {
+    font-size: 7vw;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: var(--fontPTSans);
+}
+/**Cuenta Regresiva**/
+div.cuenta-regresiva ul li{
+    text-transform: uppercase;
+    font-family: var(--fontOswald);
+    font-size: 2rem;
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    div.cuenta-regresiva ul li {
+        width: 25%;
+        float: left;
+    }
+}
 
 /* ==========================================================================
    Helper classes
