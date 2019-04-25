@@ -4,6 +4,18 @@
     let regalo = document.getElementById("regalo");
 
     document.addEventListener("DOMContentLoaded", function () {
+        //mapa
+        var map = L.map('mapa').setView([-33.442543, -70.644686], 16);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-33.442543, -70.644686]).addTo(map)
+            .bindPopup('Lugar del evento!!!')
+            .openPopup()
+            .bindTooltip("Un tooltip")
+            .openTooltip();
+
         //campos datos usuarios
         let nombre = document.getElementById("nombre");
         let apellido = document.getElementById("apellido");
@@ -35,6 +47,7 @@
         email.addEventListener("blur", validarCampos);
         email.addEventListener("blur", validarEmail)
 
+        //funciones
         function validarCampos() {
             if (this.value == "") {
                 divError.style.display = "block";
