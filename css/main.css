@@ -760,6 +760,9 @@ p.copyright {
 
 /**INTERNAS**/
 /*Registro*/
+label {
+    font-size: 1.4rem;
+}
 form.registro h3{
     text-align: center;
     text-transform: uppercase;
@@ -802,7 +805,7 @@ div.paquetes .tabla-precio input {
 }
 .contenido-dia {
     padding: 20px;
-    /*display: none;*/
+    display: none;
 }
 @media only screen and (min-width: 768px) {
     .contenido-dia > div {
@@ -850,6 +853,23 @@ div.resumen input {
     display:block;
     margin: 10px auto;
 }
+#lista-productos{
+    background-color: #e1e1e1;
+    font-size: 1.7rem;
+    display:none;
+}
+#suma_total {
+    font-size: 2rem;
+    color: var(--primaryColor);
+    text-align: center;
+}
+#error {
+    clear: both;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
