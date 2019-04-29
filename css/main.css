@@ -209,6 +209,9 @@ ul{
         max-width: 1600px;
     }
 }
+.ocultar {
+    display: none;
+}
 /**Header**/
 div.hero{
     background-image: url(../img/encabezado.jpg);
@@ -376,7 +379,6 @@ div.menu-movil:hover{
 div.menu-movil span{
     width: 80%;
     height: .6rem;
-    margin-bottom: .8rem;
     background-color: #ffffff;
     display: block;
 }
@@ -416,8 +418,6 @@ div.programa-evento{
 }
 nav.menu-programa{
     width: 100%;
-    border-bottom: 1px solid var(--primaryColor);
-    padding-bottom: 10px;
 }
 @media only screen and (min-width:768px){
     nav.menu-programa{
@@ -432,6 +432,23 @@ nav.menu-programa a {
     font-family: var(--fontOswald);
     margin-bottom: 1.2rem;
     font-size: 1.8rem;
+    position: relative;
+    border-bottom: 1px solid var(--primaryColor);
+    padding-bottom: 10px;
+}
+nav.menu-programa a.activo::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 20px;
+    width: 30px;
+    background-image: url("../img/talleres-flecha.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    bottom: -20px;
+
 }
 @media only screen and (min-width:768px){
     nav.menu-programa a{

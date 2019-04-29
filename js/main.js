@@ -143,3 +143,23 @@
         }
     })//DOMContentLoaded
 })();
+/*
+*Índice de functions
+* 1- Programa evento
+* 2- 
+* 3- 
+*/
+
+$(function () {
+    //Programa evento
+    $(".programa-evento .info-curso:first").show();
+    $(".menu-programa a").on("click", function () {
+        $(".menu-programa a").removeClass("activo");
+        $(this).addClass("activo");
+        $(".ocultar").hide();
+        var enlace = $(this).attr("href");
+        $(enlace).fadeIn(500);
+
+        return false;
+    })
+});
