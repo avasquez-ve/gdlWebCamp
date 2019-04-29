@@ -146,7 +146,7 @@
 /*
 *Índice de functions
 * 1- Programa evento
-* 2- 
+* 2- Animaciones para números
 * 3- 
 */
 
@@ -162,4 +162,7 @@ $(function () {
 
         return false;
     })
+    //Animaciones para números
+    $(".resumen-evento li:nth-child(1) p").animateNumber({number: 6}, 1200);
+
 });
