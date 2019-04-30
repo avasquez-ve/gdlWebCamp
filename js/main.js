@@ -147,7 +147,8 @@
 *Índice de functions
 * 1- Programa evento
 * 2- Animaciones para números
-* 3- 
+* 3- Cuenta regresiva
+* 4- Lettering
 */
 
 $(function () {
@@ -167,5 +168,13 @@ $(function () {
     $(".resumen-evento li:nth-child(2) p").animateNumber({number: 15}, 1200);
     $(".resumen-evento li:nth-child(3) p").animateNumber({number: 3}, 2000);
     $(".resumen-evento li:nth-child(4) p").animateNumber({number: 9}, 1500);
-
+    //Cuenta regresiva
+    $(".cuenta-regresiva").countdown("2019/06/25 00:00:00", function (event){
+        $("#dias").html(event.strftime("%D"));
+        $("#horas").html(event.strftime("%H"));
+        $("#minutos").html(event.strftime("%M"));
+        $("#segundos").html(event.strftime("%S"));
+    });
+    //Lettering
+    $(".nombre-sitio").lettering();
 });
