@@ -5,16 +5,18 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         //mapa
-        var map = L.map('mapa').setView([-33.442543, -70.644686], 16);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        if (document.getElementById("mapa")) {
+            var map = L.map('mapa').setView([-33.442543, -70.644686], 16);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-        L.marker([-33.442543, -70.644686]).addTo(map)
-            .bindPopup('Lugar del evento!!!')
-            .openPopup()
-            .bindTooltip("Un tooltip")
-            .openTooltip();
+            L.marker([-33.442543, -70.644686]).addTo(map)
+                .bindPopup('Lugar del evento!!!')
+                .openPopup()
+                .bindTooltip("Un tooltip")
+                .openTooltip();
+        }
 
         //campos datos usuarios
         let nombre = document.getElementById("nombre");
@@ -183,12 +185,15 @@ $(function () {
     }
     
     //Cuenta regresiva
-    $(".cuenta-regresiva").countdown("2019/06/25 00:00:00", function (event){
-        $("#dias").html(event.strftime("%D"));
-        $("#horas").html(event.strftime("%H"));
-        $("#minutos").html(event.strftime("%M"));
-        $("#segundos").html(event.strftime("%S"));
-    });
+    if(document.getElementById("cuenta-regresiva")) {
+        $(".cuenta-regresiva").countdown("2019/06/25 00:00:00", function (event){
+            $("#dias").html(event.strftime("%D"));
+            $("#horas").html(event.strftime("%H"));
+            $("#minutos").html(event.strftime("%M"));
+            $("#segundos").html(event.strftime("%S"));
+        });
+    }
+
     //Lettering
     $(".nombre-sitio").lettering();
     //Menú Fijo
