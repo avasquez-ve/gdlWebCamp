@@ -170,10 +170,18 @@ $(function () {
         return false;
     })
     //Animaciones para números
-    $(".resumen-evento li:nth-child(1) p").animateNumber({number: 6}, 1200);
-    $(".resumen-evento li:nth-child(2) p").animateNumber({number: 15}, 1200);
-    $(".resumen-evento li:nth-child(3) p").animateNumber({number: 3}, 2000);
-    $(".resumen-evento li:nth-child(4) p").animateNumber({number: 9}, 1500);
+    var resumenLista = $(".resumen-evento");
+    if(resumenLista.length > 0) {
+        $(".resumen-evento").waypoint(function () {
+            $(".resumen-evento li:nth-child(1) p").animateNumber({number: 6}, 1200);
+            $(".resumen-evento li:nth-child(2) p").animateNumber({number: 15}, 1200);
+            $(".resumen-evento li:nth-child(3) p").animateNumber({number: 3}, 2000);
+            $(".resumen-evento li:nth-child(4) p").animateNumber({number: 9}, 1500);
+        }, {
+            offset: "60%"
+        });
+    }
+    
     //Cuenta regresiva
     $(".cuenta-regresiva").countdown("2019/06/25 00:00:00", function (event){
         $("#dias").html(event.strftime("%D"));
