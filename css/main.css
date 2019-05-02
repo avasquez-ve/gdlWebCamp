@@ -329,6 +329,13 @@ div.barra{
     background-color: var(--secundaryColor);
     padding: 1.5rem 0;
 }
+.fixed {
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 2;
+}
 div.logo{
     width: 80%;
     float: left;
@@ -419,6 +426,7 @@ div.menu-movil span{
     height: .6rem;
     background-color: #ffffff;
     display: block;
+    margin-bottom: 1.2rem;
 }
 /** Talleres **/
 section.programa {
